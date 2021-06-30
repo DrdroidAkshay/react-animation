@@ -35,6 +35,7 @@ import List from "./components/List/List";
 //     );
 //   }
 // }
+const animationTiming = { enter: 400, exit: 1000 };
 class App extends Component {
   state = {
     modalIsOpen: false,
@@ -84,7 +85,7 @@ class App extends Component {
         </Transition>
         <Transition
           in={this.state.modalIsOpen}
-          timeout={300}
+          timeout={animationTiming}
           mountOnEnter
           unmountOnExit
         >
